@@ -2,6 +2,7 @@ var db = require('../db');
 const shortid = require('shortid');
 
 module.exports.get = (request, response) => {
+  response.cookie('user-id', 1235);
   response.render('users/index', {
     users: db.get('users').value()
   });
@@ -18,6 +19,7 @@ module.exports.search = (request, response) => {
 };
 
 module.exports.create = (request, response) => {
+  console.log(request.cookies);
   response.render('users/create');
 }
 
