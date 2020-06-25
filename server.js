@@ -11,6 +11,8 @@ var db = require('./db');
 var bookRoute = require('./routes/book.route');
 var userRoute = require('./routes/user.route');
 var transactionRoute = require('./routes/transaction.route');
+var authRoute = require('./routes/auth.route');
+var authMiddleware = require('./middlewares/auth.middleware');
 
 var port = 3000;
 
@@ -25,14 +27,13 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
 app.use(cookieParser());
 
-app.use('/books', bookRoute);
-app.use('/users', userRoute);
-app.use('/transactions', transactionRoute);
+app.use('/books',authMiddleware.requireAuth, bookRoute);
+app.use('/users',authMiddleware.requireAuth, userRoute);
+app.use('/transactions',authMiddleware.requireAuth, transactionRoute);
+app.use('/auth', authRoute);
 
 app.get("/", (request, response) => {
-  response.render('books/index', {
-    books: db.get('books').value()
-  });
+  response.render('index');
 });
 
 // listen for requests :)

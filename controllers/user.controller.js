@@ -2,7 +2,6 @@ var db = require('../db');
 const shortid = require('shortid');
 
 module.exports.get = (request, response) => {
-  response.cookie('user-id', 1235);
   response.render('users/index', {
     users: db.get('users').value()
   });

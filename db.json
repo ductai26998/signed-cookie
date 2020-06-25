@@ -16,17 +16,18 @@
   "users": [
     {
       "name": "Nguyễn Đức Nhân",
-      "id": "N6YTTrB_Z"
+      "id": "N6YTTrB_Z",
+      "email": "nhan@gmail.com",
+      "password": "123123",
+      "isAdmin": "false"
     },
     {
-      "name": "Tú",
+      "name": "Tài",
       "phone": "0342138667",
-      "id": "pZ4n_vcP0"
-    },
-    {
-      "name": "Nguyễn Đức Nhân",
-      "phone": "",
-      "id": "7aGqRA34l"
+      "id": "pZn_vcP0",
+      "email": "tai@gmail.com",
+      "password": "123123",
+      "isAdmin": "true"
     }
   ],
   "transactions": [
@@ -58,6 +59,24 @@
       "userId": "N6YTTrB_Z",
       "bookId": "Ql6hAJZwp",
       "id": "8_CbJM6bN",
+      "isComplete": "false"
+    },
+    {
+      "userId": "N6YTTrB_Z",
+      "bookId": "Hgx8azKYY",
+      "id": "0ccQL8g1h",
+      "isComplete": "false"
+    },
+    {
+      "userId": "pZn_vcP0",
+      "bookId": "Hgx8azKYY",
+      "id": "SeULUVeo3",
+      "isComplete": "false"
+    },
+    {
+      "userId": "pZn_vcP0",
+      "bookId": "h-Kj3NWGz",
+      "id": "kqNtp7K6o",
       "isComplete": "false"
     }
   ]

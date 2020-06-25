@@ -1,0 +1,15 @@
+extends ../layouts/common
+block content
+block header
+	.container.m-auto
+		if errors
+			each error in errors
+				.alert.alert-danger= error
+		form(class="d-flex flex-column" method="POST")
+			.form-group
+				label(for="email") Email
+				input#email(pattern="^([A-Z|a-z|0-9](\.|_){0,1})+[A-Z|a-z|0-9]\@([A-Z|a-z|0-9])+((\.){0,1}[A-Z|a-z|0-9]){2}\.[a-z]{2,3}$", required='', type="text", class="form-control", name="email" value=values ? values.email : '')
+			.form-group
+				label(for="password") Password
+				input#password(type="text" class="form-control" name="password" value=values ? values.password : '')
+			button(type="submit" class="btn btn-primary") Login	

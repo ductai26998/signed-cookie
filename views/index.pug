@@ -1,1 +1,10 @@
-h1 HELLO
+extends ./layouts/common
+block content
+block header
+	.container.text-center
+		.hero
+			h1 WELCOME TO BOOK MANAGEMENT
+			p
+				| Login to continue
+			.btn.btn-primary 
+				a(href="/auth/login", style="color: #FFF; text-decoration: none") Login
