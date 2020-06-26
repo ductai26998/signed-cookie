@@ -1,4 +1,6 @@
+var bcrypt = require('bcrypt');
 var db = require('../db');
+
 const shortid = require('shortid');
 
 module.exports.get = (request, response) => {
@@ -24,7 +26,16 @@ module.exports.create = (request, response) => {
 
 module.exports.postCreate = (request, response) => {
   request.body.id = shortid.generate();
+  request.body.isAdmin = "false";
+  request.body.wrongLoginCount = 0;
+  bcrypt.hash(request.body.password, 10, function(err, hash) {
+      // Store hash in your password DB.
+      console.log(hash);
+      request.body.password = hash;
+       console.log(request.body);
   db.get('users').push(request.body).write();
+  });
+ 
   response.redirect('/users');
 };
 

@@ -1,6 +1,5 @@
 extends ../layouts/common
 block content
-block header
   .container-sm
     form(class="d-flex" action="/users/search",method="GET")
       input(class="form-control" type="text", name="q")
@@ -24,4 +23,8 @@ block header
             a(class="btn btn-danger btn btn-primary ml-2 float-right" role="button" href="/users/" + user.id + "/delete") DELETE
             a(class="btn btn-primary ml-2 float-right" role="button" href="/users/" + user.id + "/update") UPDATE
     a(class="btn btn-primary m-2" role="button" href="/users/create") ADD USER
-
+block footer
+  .container-sm
+    form(class="d-flex" action="/users/search",method="GET")
+      input(class="form-control" type="text", name="q")
+      button(class="btn btn-primary ml-2") FOoter

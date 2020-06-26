@@ -18,16 +18,27 @@
       "name": "Nguyễn Đức Nhân",
       "id": "N6YTTrB_Z",
       "email": "nhan@gmail.com",
-      "password": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "false"
+      "password": "$2b$10$84lq62IuTVd2MtblX2npru6m63AKTszXckeryLtq8rPxxO4Ts22q.",
+      "isAdmin": "false",
+      "wrongLoginCount": 0
     },
     {
       "name": "Tài",
       "phone": "0342138667",
       "id": "pZn_vcP0",
       "email": "tai@gmail.com",
-      "password": "4297f44b13955235245b2497399d7a93",
-      "isAdmin": "true"
+      "password": "$2b$10$84lq62IuTVd2MtblX2npru6m63AKTszXckeryLtq8rPxxO4Ts22q.",
+      "isAdmin": "true",
+      "wrongLoginCount": 0
+    },
+    {
+      "name": "tan",
+      "phone": "0909090",
+      "email": "tan@gmail.com",
+      "password": "$2b$10$SKOT3xC2p8u1pf4ZDUWI1ubnSYwWWOM512nnNwMU2gh9MN6HLizyO",
+      "id": "6FFZfNqcn",
+      "isAdmin": "false",
+      "wrongLoginCount": 0
     }
   ],
   "transactions": [
@@ -77,6 +88,12 @@
       "userId": "pZn_vcP0",
       "bookId": "h-Kj3NWGz",
       "id": "kqNtp7K6o",
+      "isComplete": "false"
+    },
+    {
+      "userId": "N6YTTrB_Z",
+      "bookId": "Hgx8azKYY",
+      "id": "_RfZLDNiK",
       "isComplete": "false"
     }
   ]

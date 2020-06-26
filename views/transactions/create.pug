@@ -1,6 +1,5 @@
 extends ../layouts/common
 block content
-block header
   h2.text-center ADD TRANSACTION
   .container-sm
     form.d-flex.flex-column(action="/transactions/create", method="POST")
@@ -10,13 +9,13 @@ block header
             label(for="user" class="input-group-text" id="inputGroup-sizing-default") User
           select(class="btn btn-secondary dropdown-toggle" name="userId", id="user")
             each user in users
-              option= user.id       
+              option(value=user.id)= user.name       
         div(class="d-flex ml-3")  
           div(class="input-group-prepend")
             label(for="book" class="input-group-text" id="inputGroup-sizing-default") Book
           select(class="btn btn-secondary dropdown-toggle" name="bookId", id="book")
             each book in books
-              option= book.id    
+              option(value=book.id)= book.title     
         button(class="btn btn-primary ml-3") ADD
 
 

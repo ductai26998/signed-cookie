@@ -1,6 +1,5 @@
 extends ../layouts/common
 block content
-block header
 	.container-sm
 		form(action="/transactions/" + id + "/complete" method="POST")
 			input.mr-2(type="checkbox" name="isComplete" value="true")
