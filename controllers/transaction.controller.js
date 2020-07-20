@@ -4,12 +4,12 @@ const shortid = require('shortid');
 module.exports.get = (request, response) => {
   response.render('transactions/index', {
     transactions: function(){
-      var userLogin = db.get('users').find({id: request.cookies.userId}).value();
+      var userLogin = db.get('users').find({id: request.signedCookies.userId}).value();
       console.log(userLogin);
       if (userLogin.isAdmin === "true") {
         return db.get('transactions').value();
       } else {
-        return db.get('transactions').filter({userId: request.cookies.userId}).value();
+        return db.get('transactions').filter({userId: request.signedCookies.userId}).value();
       }
     },
     getUserById: function(userId) {

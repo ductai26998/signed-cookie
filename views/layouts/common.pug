@@ -15,5 +15,9 @@ html
 					a(class="nav-link" href="/users") Users
 				li(class="nav-item")
 					a(class="nav-link" href="/transactions") Transactions 
+				if user
+					li(class="nav-item")
+						span(class="nav-link")=user.name
+				
 		block content
 		block footer

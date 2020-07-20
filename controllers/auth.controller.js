@@ -36,6 +36,8 @@ module.exports.postLogin = async (request, response) => {
     return;
   }
 
-	response.cookie("userId", user.id);
+	response.cookie("userId", user.id, {
+    signed: true
+  });
   response.redirect('/transactions');
 };

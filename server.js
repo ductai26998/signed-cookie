@@ -25,7 +25,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
-app.use(cookieParser());
+app.use(cookieParser("hssuhgfsagfgsfgbkjf125"));
 
 app.use('/books',authMiddleware.requireAuth, bookRoute);
 app.use('/users',authMiddleware.requireAuth, userRoute);
